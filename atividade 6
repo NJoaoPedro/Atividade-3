@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class DescontoProduto {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite o nome do produto: ");
+        String nomeProduto = scanner.nextLine();
+
+        System.out.println("Digite o valor do produto: ");
+        double valorProduto = scanner.nextDouble();
+        
+        System.out.println("Digite a quantidade de desconto: ");
+        double quantDesconto = scanner.nextDouble();
+        
+				scanner.close();
+				
+		double desconto = valorProduto * quantDesconto / 100;
+		double descontoReal = valorProduto - desconto;
+		
+		System.out.println("Nome do produto: " + nomeProduto);
+		System.out.println("Valor do produto com desconto: R$" + descontoReal);
+			
+    }
+}
